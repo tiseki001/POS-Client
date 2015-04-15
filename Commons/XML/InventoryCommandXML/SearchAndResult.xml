@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchConditionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Where>STATUS IN ('0') and </Where> 
+	<OrderBy>
+		<string>docDate</string>
+	</OrderBy>
+	<ShowColumn>
+		<ShowColumnCondition>
+			<FieldColumnName>docId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>指令单号</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>description</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>盘点名称</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>docDate</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>制单时间</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>memo</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>备注</FieldColumnCaption>
+		</ShowColumnCondition>
+	</ShowColumn>
+	<Fields>
+		<string>docId</string>
+		<string>description</string>
+		<string>docDate</string>
+		<string>memo</string>
+	</Fields>
+	<ViewName>InventoryCommand</ViewName>
+	<Name>SearchAndResult</Name>
+	<ParentNote>QueryService</ParentNote>
+	<ChildNote>selectByConditions</ChildNote>
+</SearchConditionModel>
+
+
+

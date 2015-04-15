@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4222C42-5B74-4074-A713-A78A01C059AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WarehouseIn</RootNamespace>
+    <AssemblyName>WarehouseIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\DLLS\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\DLLS\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Prompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prompt.Designer.cs">
+      <DependentUpon>Prompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Run.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WarehouseIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseIn.Designer.cs">
+      <DependentUpon>WarehouseIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseInOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseInOrder.Designer.cs">
+      <DependentUpon>WarehouseInOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseInOrderDetial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseInOrderDetial.Designer.cs">
+      <DependentUpon>WarehouseInOrderDetial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseInSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseInSearch.Designer.cs">
+      <DependentUpon>WarehouseInSearch.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Prompt.resx">
+      <DependentUpon>Prompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="WarehouseIn.resx">
+      <DependentUpon>WarehouseIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseInOrder.resx">
+      <DependentUpon>WarehouseInOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseInOrderDetial.resx">
+      <DependentUpon>WarehouseInOrderDetial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseInSearch.resx">
+      <DependentUpon>WarehouseInSearch.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commons\Commons.csproj">
+      <Project>{08148AFA-E53D-4D42-8FCC-3AB6F74231AE}</Project>
+      <Name>Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Print\Print.csproj">
+      <Project>{217CF51C-6F42-4277-A2A6-A57156A652D1}</Project>
+      <Name>Print %28ClientProjects\Print\Print%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

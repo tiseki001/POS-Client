@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchConditionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Where />
+	<OrderBy>
+		<string>productStoreId</string>
+	</OrderBy>
+	<ShowColumn>
+		<ShowColumnCondition>
+			<FieldColumnName>productStoreId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>门店编号</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>storeName</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>门店名称</FieldColumnCaption>
+		</ShowColumnCondition>
+	</ShowColumn>
+	<Fields>
+		<string>productStoreId</string>
+		<string>storeName</string>
+	</Fields>
+	<ViewName>ReceiveStoreView</ViewName>
+	<Name>SearchAndResult</Name>
+	<ParentNote>QueryService</ParentNote>
+	<ChildNote>selectByConditions</ChildNote>
+</SearchConditionModel>
+
+
+

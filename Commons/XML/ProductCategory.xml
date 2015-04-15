@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<ComboBoxModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Where></Where>
+  <ViewName>ProductCategory</ViewName>
+  <OrderBy>
+    <string>productCategoryId</string>
+  </OrderBy>
+  <Fields>
+    <string>productCategoryId</string>
+    <string>categoryName</string>
+  </Fields>
+  <Name>ProductCategory</Name>
+  <ValueKey>productCategoryId</ValueKey>
+  <TextKey>categoryName</TextKey>
+</ComboBoxModel>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchConditionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Where>PSF.PRODUCT_STORE_ID='@PRODUCT_STORE_ID' AND </Where>
+	<OrderBy>
+		<string>productId</string>
+	</OrderBy>
+	<ShowColumn>
+		<ShowColumnCondition>
+			<FieldColumnName>productId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>商品代码</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>productName</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>商品名称</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>idValue</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>条形码</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>sequenceId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>商品串号</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>isSequence</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>串号管理</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>facilityName</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>仓库</FieldColumnCaption>
+		</ShowColumnCondition>
+	</ShowColumn>
+	<Fields>
+		<string>productId</string>
+		<string>productName</string>
+		<string>idValue</string>
+		<string>sequenceId</string>
+		<string>isSequence</string>
+		<string>facilityName</string>
+	</Fields>
+	<ViewName>ProductSequenceView</ViewName>
+	<Name>SearchAndResult</Name>
+	<ParentNote>QueryService</ParentNote>
+	<ChildNote>selectByConditions</ChildNote>
+</SearchConditionModel>
+
+
+

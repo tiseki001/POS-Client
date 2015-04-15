@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchConditionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Where>PR.ROLE_TYPE_ID = 'CUSTOMER' AND  </Where>
+	<OrderBy>
+		<string>partyId</string>
+	</OrderBy>
+	<ShowColumn>
+		<ShowColumnCondition>
+			<FieldColumnName>partyId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>会员编号</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>phoneMobile</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>会员手机号</FieldColumnCaption>
+		</ShowColumnCondition>
+    <ShowColumnCondition>
+      <FieldColumnName>lastName</FieldColumnName>
+      <Type />
+      <FieldColumnCaption>会员姓名(L)</FieldColumnCaption>
+    </ShowColumnCondition>
+    <ShowColumnCondition>
+      <FieldColumnName>middleName</FieldColumnName>
+      <Type />
+      <FieldColumnCaption>会员姓名(M)</FieldColumnCaption>
+    </ShowColumnCondition>
+    <ShowColumnCondition>
+      <FieldColumnName>firstName</FieldColumnName>
+      <Type />
+      <FieldColumnCaption>会员姓名(F)</FieldColumnCaption>
+    </ShowColumnCondition>  
+	</ShowColumn>
+	<Fields>
+		<string>partyId</string>
+		<string>phoneMobile</string>
+    <string>lastName</string>
+    <string>middleName</string>
+    <string>firstName</string>   
+	</Fields>
+	<ViewName>CustomerAndpersonView</ViewName>
+	<Name>SearchAndResult</Name>
+	<ParentNote>QueryService</ParentNote>
+	<ChildNote>selectByConditions</ChildNote>
+</SearchConditionModel>
+
+
+

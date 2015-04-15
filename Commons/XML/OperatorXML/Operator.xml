@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<OperatorModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<FirstOperator>like</FirstOperator>
+	<OperatorList>
+		<string>=</string>
+		<string>like</string>
+		<string>&gt;</string>
+		<string>&lt;</string>
+		<string>&gt;=</string>
+		<string>&lt;=</string>
+	</OperatorList>
+</OperatorModel>

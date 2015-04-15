@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ListConditionModel>
+		<ConditionModel>
+			<ConditionValue>1</ConditionValue>
+			<ConditionText>商品串号</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>PS.Sequence_Id</FieldColumnName>
+			<XmlFielName/>
+			<FilterExpression />
+			<LikeType>2</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>2</ConditionValue>
+			<ConditionText>条形码</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>GI.Id_Value</FieldColumnName>
+			<XmlFielName/>
+			<FilterExpression />
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>3</ConditionValue>
+			<ConditionText>商品代码</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>PR.PRODUCT_ID</FieldColumnName>
+			<XmlFielName/>
+			<FilterExpression />
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>4</ConditionValue>
+			<ConditionText>商品名称</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>PR.PRODUCT_NAME</FieldColumnName>
+			<XmlFielName />
+			<FilterExpression />
+			<LikeType>1</LikeType>
+		</ConditionModel>
+	</ListConditionModel>
+</Condition>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchConditionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Where />
+	<OrderBy>
+		<string>productId</string>
+	</OrderBy>
+	<ShowColumn>
+		<ShowColumnCondition>
+			<FieldColumnName>productId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>商品代码</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>productName</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>商品名称</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>featureAll</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>特征</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>categoryAll</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>分类</FieldColumnCaption>
+		</ShowColumnCondition>
+	</ShowColumn>
+	<Fields>
+		<string>productId</string>
+		<string>productName</string>
+		<string>featureAll</string>
+		<string>categoryAll</string>
+	</Fields>
+	<ViewName>ProductView</ViewName>
+	<Name>SearchAndResult</Name>
+	<ParentNote>QueryService</ParentNote>
+	<ChildNote>selectByConditions</ChildNote>
+</SearchConditionModel>
+
+
+

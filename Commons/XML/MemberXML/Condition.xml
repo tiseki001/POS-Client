@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ListConditionModel>
+		<ConditionModel>
+			<ConditionValue>1</ConditionValue>
+			<ConditionText>会员手机号</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>PE.PHONE_MOBILE</FieldColumnName>
+			<XmlFielName/>
+			<FilterExpression />
+      <LikeType>1</LikeType>
+    </ConditionModel>
+    <ConditionModel>
+      <ConditionValue>2</ConditionValue>
+      <ConditionText>会员编号</ConditionText>
+      <Type>1</Type>
+      <FieldColumnName>PE.PARTY_ID</FieldColumnName>
+      <XmlFielName/>
+      <FilterExpression />
+      <LikeType>1</LikeType>
+    </ConditionModel>    
+	</ListConditionModel>
+</Condition>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<ComboBoxModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Where>FA.OWNER_PARTY_ID='@PARTY_ID'</Where>
+	<ViewName>ProductStoreAndFacility</ViewName>
+	<OrderBy>
+		<string>productStoreId</string>
+	</OrderBy>
+	<Fields>
+		<string>productStoreId</string>
+		<string>storeName</string>
+	</Fields>
+	<Name>store</Name>
+	<ValueKey>productStoreId</ValueKey>
+	<TextKey>storeName</TextKey>
+</ComboBoxModel>

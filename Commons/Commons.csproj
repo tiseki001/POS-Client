@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08148AFA-E53D-4D42-8FCC-3AB6F74231AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Commons</RootNamespace>
+    <AssemblyName>Commons</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\MemoryCacheHelpercs.cs" />
+    <Compile Include="DLL\DllInvoke.cs" />
+    <Compile Include="DLLS\Excel\ExcelApp.cs" />
+    <Compile Include="DLLS\Excel\ExcelDataProcess.cs" />
+    <Compile Include="JSON\BasePosModel.cs" />
+    <Compile Include="JSON\JSON.cs" />
+    <Compile Include="JSON\JsonDt.cs" />
+    <Compile Include="Model\ComboBox\ComboBoxModel.cs" />
+    <Compile Include="Model\ConstantModel.cs" />
+    <Compile Include="Model\LoginInfo.cs" />
+    <Compile Include="Model\Member\MemberModel.cs" />
+    <Compile Include="Model\Order\BackOrderModel.cs" />
+    <Compile Include="Model\Order\CollectionOrderModel.cs" />
+    <Compile Include="Model\Order\OrderModel.cs" />
+    <Compile Include="Model\Order\OrderQueryModel.cs" />
+    <Compile Include="Model\Order\PaymentInOrderModel.cs" />
+    <Compile Include="Model\Order\PreCollectionOrderModel.cs" />
+    <Compile Include="Model\Order\PreOrderModel.cs" />
+    <Compile Include="Model\Order\PreRefundModel.cs" />
+    <Compile Include="Model\Order\RefundOrderModel.cs" />
+    <Compile Include="Model\Order\ReturnInWhsModel.cs" />
+    <Compile Include="Model\Order\ReturnOrderModel.cs" />
+    <Compile Include="Model\Order\SalesOrderModel.cs" />
+    <Compile Include="Model\Order\SalesOutWhsOrderModel.cs" />
+    <Compile Include="Model\ReturnResultModel.cs" />
+    <Compile Include="Model\Menu.cs" />
+    <Compile Include="Model\SearchButton\ConditionModel.cs" />
+    <Compile Include="Model\SearchButton\OperatorModel.cs" />
+    <Compile Include="Model\Stock\GoodsDeliverModel.cs" />
+    <Compile Include="Model\Stock\GoodsReceiptModel.cs" />
+    <Compile Include="Model\Stock\InventotyModel.cs" />
+    <Compile Include="Model\Stock\ProductSearch.cs" />
+    <Compile Include="Model\Stock\ReplenishmentModel.cs" />
+    <Compile Include="Model\Stock\StockModel.cs" />
+    <Compile Include="Model\Stock\WarehouseInModel.cs" />
+    <Compile Include="Model\Stock\WarehouseOutModel.cs" />
+    <Compile Include="Model\Stock\WarehouseTransferModel.cs" />
+    <Compile Include="Model\SyncModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\BaseCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\BaseCombobox.Designer.cs">
+      <DependentUpon>BaseCombobox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Constant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WinForm\DevCommon.cs" />
+    <Compile Include="WebService\WebSvcCaller.cs" />
+    <Compile Include="WinForm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\MainImgButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinForm\MainImgButton.Designer.cs">
+      <DependentUpon>MainImgButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\BaseMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\BaseMainForm.Designer.cs">
+      <DependentUpon>BaseMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\SearchButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm\SearchButton.Designer.cs">
+      <DependentUpon>SearchButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XML\ServiceModel.cs" />
+    <Compile Include="XML\XMLBase.cs" />
+    <Compile Include="XML\XmlUtil  .cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Log\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\MainImgButton.resx">
+      <DependentUpon>MainImgButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\SearchButton.resx">
+      <DependentUpon>SearchButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLS\log4net.dll" />
+    <Content Include="DLLS\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="DLLS\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="DLLS\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="DLLS\Newtonsoft.Json.dll" />
+    <Content Include="XML\BarCodeXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\BarCodeXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\Config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\DeliveryCommandXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\DeliveryCommandXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\InventoryCommandXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\InventoryCommandXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\MemberXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\MemberXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\OperatorXML\Operator.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\Product.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ProductCategory.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ProductFeature.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ProductIdXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ProductNameXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ProductNameXML\SearchAndResult.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ReceiveCommandXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ReceiveCommandXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ReceiveStoreXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\ReceiveStoreXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\SalesPersonXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\SalesPersonXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\SequenceXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\SequenceXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\Store.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\ProductIdXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\StoreXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\StoreXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\StoreSetting.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\Sync.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\TransferCommandXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\TransferCommandXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\WebUrl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\WhsInCommandXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\WhsInCommandXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\WhsOutCommandXML\Condition.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\WhsOutCommandXML\SearchAndResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

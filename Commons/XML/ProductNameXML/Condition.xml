@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Condition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ListConditionModel>
+		<ConditionModel>
+			<ConditionValue>1</ConditionValue>
+			<ConditionText>商品代码</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>P.PRODUCT_ID</FieldColumnName>
+			<XmlFielName/>
+			<FilterExpression />
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>2</ConditionValue>
+			<ConditionText>商品名称</ConditionText>
+			<Type>1</Type>
+			<FieldColumnName>P.PRODUCT_NAME</FieldColumnName>
+			<XmlFielName />
+			<FilterExpression />
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>3</ConditionValue>
+			<ConditionText>分类</ConditionText>
+			<Type>2</Type>
+			<FieldColumnName>PCM.Product_Category_Id</FieldColumnName>
+			<XmlFielName>ProductCategory</XmlFielName>
+			<FilterExpression />
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>4</ConditionValue>
+			<ConditionText>型号</ConditionText>
+			<Type>2</Type>
+			<FieldColumnName>PFA.product_Feature_Id</FieldColumnName>
+			<XmlFielName>ProductFeature</XmlFielName>
+			<FilterExpression>productFeatureTypeId = 'MODEL'</FilterExpression>
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>5</ConditionValue>
+			<ConditionText>颜色</ConditionText>
+			<Type>2</Type>
+			<FieldColumnName>PFA.product_Feature_Id</FieldColumnName>
+			<XmlFielName>ProductFeature</XmlFielName>
+			<FilterExpression>productFeatureTypeId = 'COLOR'</FilterExpression>
+			<LikeType>1</LikeType>
+		</ConditionModel>
+		<ConditionModel>
+			<ConditionValue>6</ConditionValue>
+			<ConditionText>单位</ConditionText>
+			<Type>2</Type>
+			<FieldColumnName>PFA.product_Feature_Id</FieldColumnName>
+			<XmlFielName>ProductFeature</XmlFielName>
+			<FilterExpression>productFeatureTypeId = 'UNIT'</FilterExpression>
+			<LikeType>1</LikeType>
+		</ConditionModel>
+	</ListConditionModel>
+</Condition>

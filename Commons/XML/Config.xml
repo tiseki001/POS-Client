@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ServiceConfig TimerStep="60000" TimerDate="60000">
+	<URL>
+		<In IpAddress="http://192.168.1.205:8080"/>
+		<Out IpAddress="http://192.168.1.205:8080"/>
+	</URL>
+	<SearchPhoneMobile WebUrl="/webtools/control/SOAPService/findPhoneMobileWeb">
+		<!--查询电话号码是否存在-->
+		<SearchPhoneMobile ClassName="" FunctionName="findPhoneMobileWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</SearchPhoneMobile>
+	<StorePerson WebUrl="/webtools/control/SOAPService/getPersonByProductStoreId">
+		<!--本门店人员信息-->
+		<StorePerson ClassName="" FunctionName="getPersonByProductStoreId" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</StorePerson>
+	<FaultType WebUrl="/webtools/control/SOAPService/findFaultTypeWeb">
+		<!--故障类型-->
+		<FaultType ClassName="" FunctionName="findFaultTypeWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</FaultType>
+	<FacilityId WebUrl="/webtools/control/SOAPService/findFaultTypeWeb">
+		<!--根据移动类型获得仓库ID-->
+		<FacilityId ClassName="" FunctionName="findFacilityWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</FacilityId>
+	<PostingDate WebUrl="/webtools/control/SOAPService/findPostingDateWeb">
+		<!--故障类型-->
+		<PostingDate ClassName="" FunctionName="findPostingDateWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</PostingDate>
+	<Stock WebUrl="/webtools/control/SOAPService/analyticalParameters">
+		<!--库存查询-->
+		<StockSearch ClassName="" FunctionName="analyticalParameters" Default="findProductToInventory" TimerType="0" TimerInfo="30" Type="In" />
+		<!--仓库查询-->
+		<FacilitySearch ClassName="" FunctionName="analyticalParameters" Default="findFacility" TimerType="0" TimerInfo="30" Type="In" />
+		<!--他店库存查询-->
+		<StockOtherSearch ClassName="" FunctionName="analyticalParameters" Default="findProductToInventoryOther" TimerType="0" TimerInfo="30" Type="In" />
+		<!--串号查询-->
+		<SerialSearch ClassName="" FunctionName="analyticalParameters" Default="findProductToSeq" TimerType="0" TimerInfo="30" Type="In" />
+	</Stock>
+	<Login WebUrl="/webtools/control/SOAPService/checkUserLogin">
+		<!--登录-->
+		<Login ClassName="" FunctionName="checkUserLogin" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</Login>
+	<ProductAndSequenceSearch WebUrl="/webtools/control/SOAPService/findProductInventoryWeb">
+		<!--商品和串号查询-->
+		<ProductAndSequenceSearch ClassName="" FunctionName="findProductInventoryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</ProductAndSequenceSearch>
+	<DeliveryProductSearch WebUrl="/webtools/control/SOAPService/findInventoryItemWeb">
+		<!--发货商品查询-->
+		<DeliveryProductSearch ClassName="" FunctionName="findInventoryItemWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</DeliveryProductSearch>
+	<Menu WebUrl="/webtools/control/SOAPService/getMenuCByUserLoginId">
+		<!--移动类型查询-->
+		<Menu ClassName="" FunctionName="getMenuCByUserLoginId" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</Menu>
+	<MoveType WebUrl="/webtools/control/SOAPService/findMovementWeb">
+		<!--移动类型查询-->
+		<MoveSearch ClassName="" FunctionName="findMovementWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</MoveType>
+	<GoodsDeliveryCommand WebUrl="/webtools/control/SOAPService/findDeliveryCommandWeb">
+		<!--发货指令头数据查询-->
+		<DeliveryCommandSearch ClassName="" FunctionName="findDeliveryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsDeliveryCommand>
+	<GoodsDeliveryItemCommand WebUrl="/webtools/control/SOAPService/findDeliveryItemcommandWeb">
+		<!--发货指令明细数据查询-->
+		<DeliveryItemCommandSearch ClassName="" FunctionName="findDeliveryItemcommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsDeliveryItemCommand>
+	<Constant WebUrl="/webtools/control/SOAPService/findDllConstantWeb">
+		<!--常量查询-->
+		<ConstantSearch ClassName="" FunctionName="findDllConstantWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</Constant>
+	<GoodsDelivery WebUrl="/webtools/control/SOAPService/findDeliveryDocWeb">
+		<!--发货单头数据查询-->
+		<GoodsDeliveryHeader ClassName="" FunctionName="findDeliveryDocWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsDelivery>
+	<GoodsDeliveryItem WebUrl="/webtools/control/SOAPService/findDeliveryItemWeb">
+		<!--发货单明细数据查询-->
+		<GoodsDeliveryItem ClassName="" FunctionName="findDeliveryItemWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsDeliveryItem>
+	<GoodsDeliveryDelete WebUrl="/webtools/control/SOAPService/deleteDeliveryCommandWeb">
+		<!--删除发货单草稿数据-->
+		<GoodsDeliveryDelete ClassName="" FunctionName="deleteDeliveryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsDeliveryDelete>
+	<GoodsDeliveryInsert WebUrl="/webtools/control/SOAPService/createDeliveryWeb">
+		<!--添加发货单草稿数据-->
+		<GoodsDeliveryInsert ClassName="" FunctionName="createDeliveryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsDeliveryInsert>
+	<UpdateGoodsDelivery WebUrl="/webtools/control/SOAPService/updateDeliveryWeb">
+		<!--更新发货单信息-->
+		<UpdateGoodsDelivery ClassName="" FunctionName="updateDeliveryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateGoodsDelivery>
+	<UpdateDeliveryPrintNum WebUrl="/webtools/control/SOAPService/updateDeliveryPrintWeb">
+		<!--修改发货打印次数-->
+		<UpdateDeliveryPrintNum ClassName="" FunctionName="updateDeliveryPrintWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateDeliveryPrintNum>
+	<UpdateReceivePrintNum WebUrl="/webtools/control/SOAPService/updateReceivePrintWeb">
+		<!--修改收货打印次数-->
+		<UpdateReceivePrintNum ClassName="" FunctionName="updateReceivePrintWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateReceivePrintNum>
+	<UpdateDeliveryCommandStatus WebUrl="/webtools/control/SOAPService/updateDeliveryCommandStatusWeb">
+		<!--强制已清-->
+		<UpdateDeliveryCommandStatus ClassName="" FunctionName="updateDeliveryCommandStatusWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateDeliveryCommandStatus>
+	<ProductInfo WebUrl="/webtools/control/SOAPService/productInfo">
+		<!--添加发货单草稿数据-->
+		<ProductInfo ClassName="" FunctionName="productInfo" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</ProductInfo>
+	<ProductSequenceInfo WebUrl="/webtools/control/SOAPService/productSequenceInfo">
+		<!--添加发货单草稿数据-->
+		<ProductSequenceInfo ClassName="" FunctionName="productSequenceInfo" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</ProductSequenceInfo>
+	<DeleteReceiveDraft WebUrl="/webtools/control/SOAPService/deleteReceiveCommandWeb">
+		<!--删除收货单草稿数据-->
+		<DeleteReceiveDraft ClassName="" FunctionName="deleteReceiveCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</DeleteReceiveDraft>
+	<GoodsReceiveCommand WebUrl="/webtools/control/SOAPService/findReceiveCommandWeb">
+		<!--收货指令头数据查询-->
+		<GoodsReceiveCommand ClassName="" FunctionName="findReceiveCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsReceiveCommand>
+	<GoodsReceiveItemCommand WebUrl="/webtools/control/SOAPService/findReceiveItemcommandWeb">
+		<!--发货指令明细数据查询-->
+		<GoodsReceiveItemCommand ClassName="" FunctionName="findReceiveItemcommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsReceiveItemCommand>
+	<GoodsReceive WebUrl="/webtools/control/SOAPService/findReceiveDocWeb">
+		<!--收货单信息查询-->
+		<GoodsReceive ClassName="" FunctionName="findReceiveDocWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsReceive>
+	<GoodsReceiveItem WebUrl="/webtools/control/SOAPService/findReceiveItemWeb">
+		<!--收货单明细数据查询-->
+		<GoodsReceiveItem ClassName="" FunctionName="findReceiveItemWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsReceiveItem>
+	<GoodsReceiveInsert WebUrl="/webtools/control/SOAPService/createReceiveWeb">
+		<!--添加收货单草稿数据-->
+		<GoodsReceiveInsert ClassName="" FunctionName="createReceiveWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsReceiveInsert>
+	<UpdateGoodsReceive WebUrl="/webtools/control/SOAPService/updateReceiveWeb">
+		<!--更新入库单信息-->
+		<UpdateGoodsReceive ClassName="" FunctionName="updateReceiveWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateGoodsReceive>
+	<WhsInCommand WebUrl="/webtools/control/SOAPService/findReceiveCommandWeb">
+		<!--入库指令头数据查询-->
+		<WhsInCommand ClassName="" FunctionName="findReceiveCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</WhsInCommand>
+	<WhsInItemCommand WebUrl="/webtools/control/SOAPService/findReceiveItemcommandWeb">
+		<!--入库指令明细数据查询-->
+		<WhsInItemCommand ClassName="" FunctionName="findReceiveItemcommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</WhsInItemCommand>
+	<DeleteWhsInDraft WebUrl="/webtools/control/SOAPService/deleteReceiveCommandWeb">
+		<!--删除入库单草稿数据-->
+		<DeleteWhsInDraft ClassName="" FunctionName="deleteReceiveCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</DeleteWhsInDraft>
+	<GoodsWhsInHeader WebUrl="/webtools/control/SOAPService/findReceiveDocWeb">
+		<!--入库单头信息查询-->
+		<GoodsWhsInHeader ClassName="" FunctionName="findReceiveDocWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsInHeader>
+	<GoodsWhsInItem WebUrl="/webtools/control/SOAPService/findReceiveItemWeb">
+		<!--入库单明细信息查询-->
+		<GoodsWhsInItem ClassName="" FunctionName="findReceiveItemWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsInItem>
+	<UpdateGoodsWhsIn WebUrl="/webtools/control/SOAPService/updateReceiveWeb">
+		<!--更新入库单信息-->
+		<UpdateGoodsWhsIn ClassName="" FunctionName="updateReceiveWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateGoodsWhsIn>
+	<GoodsWhsInInsert WebUrl="/webtools/control/SOAPService/createReceiveWeb">
+		<!--添加收货单草稿数据-->
+		<GoodsWhsInInsert ClassName="" FunctionName="createReceiveWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsInInsert>
+	<WhsOutCommand WebUrl="/webtools/control/SOAPService/findDeliveryCommandWeb">
+		<!--出库指令头数据查询-->
+		<WhsOutCommand ClassName="" FunctionName="findDeliveryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</WhsOutCommand>
+	<WhsOutItemCommand WebUrl="/webtools/control/SOAPService/findDeliveryItemcommandWeb">
+		<!--出库指令明细数据查询-->
+		<WhsOutItemCommand ClassName="" FunctionName="findDeliveryItemcommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</WhsOutItemCommand>
+	<DeleteWhsOutDraft WebUrl="/webtools/control/SOAPService/deleteDeliveryCommandWeb">
+		<!--删除入库单草稿数据-->
+		<DeleteWhsOutDraft ClassName="" FunctionName="deleteDeliveryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</DeleteWhsOutDraft>
+	<GoodsWhsOutHeader WebUrl="/webtools/control/SOAPService/findDeliveryDocWeb">
+		<!--出库单头信息查询-->
+		<GoodsWhsOutHeader ClassName="" FunctionName="findDeliveryDocWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsOutHeader>
+	<GoodsWhsOutItemCommand WebUrl="/webtools/control/SOAPService/findDeliveryItemcommandWeb">
+		<!--出库指令明细数据查询-->
+		<GoodsWhsOutItemCommand ClassName="" FunctionName="findDeliveryItemcommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsOutItemCommand>
+	<GoodsWhsOutCommand WebUrl="/webtools/control/SOAPService/findDeliveryCommandWeb">
+		<!--出库指令头数据查询-->
+		<GoodsWhsOutCommand ClassName="" FunctionName="findDeliveryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsOutCommand>
+	<UpdateGoodsWhsOut WebUrl="/webtools/control/SOAPService/updateDeliveryWeb">
+		<!--更新出库单信息-->
+		<UpdateGoodsWhsOut ClassName="" FunctionName="updateDeliveryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateGoodsWhsOut>
+	<GoodsWhsOutInsert WebUrl="/webtools/control/SOAPService/createDeliveryWeb">
+		<!--添加出库单数据-->
+		<GoodsWhsOutInsert ClassName="" FunctionName="createDeliveryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsWhsOutInsert>
+	<ReplenishmentHeader WebUrl="/webtools/control/SOAPService/findReplenishmentWeb">
+		<!--补货头数据查询-->
+		<ReplenishmentHeader ClassName="" FunctionName="findReplenishmentWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</ReplenishmentHeader>
+	<ReplenishmentItem WebUrl="/webtools/control/SOAPService/findReplenishmentItemWeb">
+		<!--补货明细数据查询-->
+		<ReplenishmentItem ClassName="" FunctionName="findReplenishmentItemWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</ReplenishmentItem>
+	<ReplenishmentBeforItem WebUrl="/webtools/control/SOAPService/saveReplenishmentBeforWeb">
+		<!--补货明细数据查询-->
+		<ReplenishmentBeforItem ClassName="" FunctionName="saveReplenishmentBeforWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</ReplenishmentBeforItem>
+	<DeleteReplenishmentDraft WebUrl="/webtools/control/SOAPService/deleteReplenishmentWeb">
+		<!--删除补货单草稿数据-->
+		<DeleteReplenishmentDraft ClassName="" FunctionName="deleteReplenishmentWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</DeleteReplenishmentDraft>
+	<InsertReplenishment WebUrl="/webtools/control/SOAPService/saveReplenishmentWeb">
+		<!--添加补货单数据-->
+		<InsertReplenishment ClassName="" FunctionName="saveReplenishmentWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</InsertReplenishment>
+	<TransferItemCommand WebUrl="/webtools/control/SOAPService/findDeliveryItemcommandWeb">
+		<!--移库指令明细数据查询-->
+		<TransferItemCommand ClassName="" FunctionName="findDeliveryItemcommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</TransferItemCommand>
+	<TransfertCommand WebUrl="/webtools/control/SOAPService/findDeliveryCommandWeb">
+		<!--移库指令头数据查询-->
+		<TransfertCommand ClassName="" FunctionName="findDeliveryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</TransfertCommand>
+	<TransferHeader WebUrl="/webtools/control/SOAPService/findDeliveryDocWeb">
+		<!--移库单头信息查询-->
+		<TransferHeader ClassName="" FunctionName="findDeliveryDocWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</TransferHeader>
+	<GoodsTransferInsert WebUrl="/webtools/control/SOAPService/createDeliveryWeb">
+		<!--添加移库单数据-->
+		<GoodsTransferInsert ClassName="" FunctionName="createDeliveryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</GoodsTransferInsert>
+	<UpdateGoodsTransfer WebUrl="/webtools/control/SOAPService/updateDeliveryWeb">
+		<!--更新移库单信息-->
+		<UpdateGoodsTransfer ClassName="" FunctionName="updateDeliveryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateGoodsTransfer>
+	<MemberGrade WebUrl="/webtools/control/SOAPService/findPartyPcWeb">
+		<!--会员等级-->
+		<MemberGrade ClassName="" FunctionName="findPartyPcWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</MemberGrade>
+	<MemberSearch WebUrl="/webtools/control/SOAPService/findPartyInfoWeb">
+		<!--会员查询-->
+		<MemberSearch ClassName="" FunctionName="findPartyInfoWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</MemberSearch>
+	<MemberInsert WebUrl="/webtools/control/SOAPService/createPartyWeb">
+		<!--会员添加-->
+		<MemberInsert ClassName="" FunctionName="createPartyWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</MemberInsert>
+	<MemberUpdate WebUrl="/webtools/control/SOAPService/updatePartyWeb">
+		<!--会员修改-->
+		<MemberUpdate ClassName="" FunctionName="updatePartyWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</MemberUpdate>
+	<InventoryDraftDelete WebUrl="/webtools/control/SOAPService/deleteInventoryWeb">
+		<!--删除盘点草稿数据-->
+		<InventoryDraftDelete ClassName="" FunctionName="deleteInventoryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</InventoryDraftDelete>
+	<InventoryHeaderSearch WebUrl="/webtools/control/SOAPService/findInventoryWeb">
+		<!--盘点头信息查询-->
+		<InventoryHeaderSearch ClassName="" FunctionName="findInventoryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</InventoryHeaderSearch>
+	<InsertInventoty WebUrl="/webtools/control/SOAPService/createInventoryWeb">
+		<!--添加盘点数据-->
+		<InsertInventoty ClassName="" FunctionName="createInventoryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</InsertInventoty>
+	<UpdateInventoty WebUrl="/webtools/control/SOAPService/updateInventoryWeb">
+		<!--修改盘点数据-->
+		<UpdateInventoty ClassName="" FunctionName="updateInventoryWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</UpdateInventoty>
+	<InventotyCommandSearch WebUrl="/webtools/control/SOAPService/findInventoryCommandWeb">
+		<!--查询盘点指令头数据-->
+		<InventotyCommandSearch ClassName="" FunctionName="findInventoryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</InventotyCommandSearch>
+	<InventotyItemSearch WebUrl="/webtools/control/SOAPService/findInventoryDetailWeb">
+		<!--获得盘点行数据-->
+		<InventotyItemSearch ClassName="" FunctionName="findInventoryDetailWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</InventotyItemSearch>
+	<SearchCommandFacility WebUrl="/webtools/control/SOAPService/findInventoryCommandFacilityWeb">
+		<!--根据盘点指令获得仓库-->
+		<SearchCommandFacility ClassName="" FunctionName="findInventoryCommandFacilityWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</SearchCommandFacility>
+	<SearchInventiryItemCommand WebUrl="/webtools/control/SOAPService/createInventoryDetailOtherWeb">
+		<!--根据盘点指令单号查询行数据-->
+		<SearchInventiryItemCommand ClassName="" FunctionName="createInventoryDetailOtherWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</SearchInventiryItemCommand>
+	<SearchInventiryHeaderCommandByDocId WebUrl="/webtools/control/SOAPService/findInventoryCommandWeb">
+		<!--根据单号指令单号获得盘点头数据-->
+		<SearchInventiryHeaderCommandByDocId ClassName="" FunctionName="findInventoryCommandWeb" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</SearchInventiryHeaderCommandByDocId>
+	<QueryService WebUrl="/webtools/control/SOAPService/selectByConditions">
+		<!--通用查询-->
+		<selectByConditions ClassName="" FunctionName="selectByConditions" Default="selectByConditions" TimerType="0" TimerInfo="30" Type="In" />
+	</QueryService>
+	<importEntity WebUrl="/webtools/control/SOAPService/importEntity">
+		<!--数据导入-->
+		<importEntity ClassName="" FunctionName="importEntity" Default="importEntity" TimerType="0" TimerInfo="30" Type="In" />
+	</importEntity>
+	<getAllEntity WebUrl="/webtools/control/SOAPService/getAllEntity">
+		<!--数据导入-->
+		<getAllEntity ClassName="" FunctionName="getAllEntity" Default="getAllEntity" TimerType="0" TimerInfo="30" Type="In" />
+	</getAllEntity>
+	<getOrderId WebUrl="/webtools/control/SOAPService/getOrderId">
+		<!--获得订单ID-->
+		<getOrderId ClassName="" FunctionName="getOrderId" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getOrderId>
+	<createSalesOrder WebUrl="/webtools/control/SOAPService/createSalesOrder">
+		<!--生成销售订单-->
+		<createSalesOrder ClassName="" FunctionName="createSalesOrder" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</createSalesOrder>
+	<getSalesOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getSalesOrderHeaderByCondition">
+		<!--根据条件获得销售订单表头-->
+		<getSalesOrderHeaderByCondition ClassName="" FunctionName="getSalesOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getSalesOrderHeaderByCondition>
+	<getSalesOrderDtlById WebUrl="/webtools/control/SOAPService/getSalesOrderDtlById">
+		<!--根据ID获得销售订单明细-->
+		<getSalesOrderDtlById ClassName="" FunctionName="getSalesOrderDtlById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getSalesOrderDtlById>
+	<getPaymentMethod WebUrl="/webtools/control/SOAPService/getPaymentMethod">
+		<!--根据条件获得付款方式-->
+		<getPaymentMethod ClassName="" FunctionName="getPaymentMethod" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getPaymentMethod>
+	<getSalesPersonBySalesPersonId WebUrl="/webtools/control/SOAPService/getSalesPersonBySalesPersonId">
+		<!--根据ID获得销售人员ID-->
+		<getSalesPersonBySalesPersonId ClassName="" FunctionName="getSalesPersonBySalesPersonId" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getSalesPersonBySalesPersonId>
+	<getMemberByPhoneNo WebUrl="/webtools/control/SOAPService/getMemberByPhoneNo">
+		<!--据ID获得顾客信息-->
+		<getMemberByPhoneNo ClassName="" FunctionName="getMemberByPhoneNo" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getMemberByPhoneNo>
+	<getProductByCond WebUrl="/webtools/control/SOAPService/getProductByCond">
+		<!--据ID获得顾客信息-->
+		<getProductByCond ClassName="" FunctionName="getProductByCond" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getProductByCond>
+	<createCollectionOrder WebUrl="/webtools/control/SOAPService/createCollectionOrder">
+		<!--生成收款单-->
+		<createCollectionOrder ClassName="" FunctionName="createCollectionOrder" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</createCollectionOrder>
+	<deleteSalesOrderById WebUrl="/webtools/control/SOAPService/deleteSalesOrderById">
+		<!--生成收款单-->
+		<deleteSalesOrderById ClassName="" FunctionName="deleteSalesOrderById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</deleteSalesOrderById>
+	<updateSalesOrderStatus WebUrl="/webtools/control/SOAPService/updateSalesOrderStatus">
+		<!--生成收款单-->
+		<updateSalesOrderStatus ClassName="" FunctionName="updateSalesOrderStatus" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</updateSalesOrderStatus>
+	<createSalesOrderAll WebUrl="/webtools/control/SOAPService/createSalesOrderAll">
+		<!--生成收款单-->
+		<createSalesOrderAll ClassName="" FunctionName="createSalesOrderAll" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</createSalesOrderAll>
+	<getSalesOrderById WebUrl="/webtools/control/SOAPService/getSalesOrderById">
+		<!--根据ID获取销售订单-->
+		<getSalesOrderById ClassName="" FunctionName="getSalesOrderById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getSalesOrderById>
+	<getSalesOutWhsOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getSalesOutWhsOrderHeaderByCondition">
+		<!--根据ID获取销售出库单表头-->
+		<getSalesOutWhsOrderHeaderByCondition ClassName="" FunctionName="getSalesOutWhsOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getSalesOutWhsOrderHeaderByCondition>
+	<getBomByCond WebUrl="/webtools/control/SOAPService/getBomByCond">
+		<!--根据条件获取BOM-->
+		<getBomByCond ClassName="" FunctionName="getBomByCond" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getBomByCond>
+	<getProductByBomCond WebUrl="/webtools/control/SOAPService/getProductByBomCond">
+		<!--根据条件获取副商品-->
+		<getProductByBomCond ClassName="" FunctionName="getProductByBomCond" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getProductByBomCond>
+	<updateSalesOrder WebUrl="/webtools/control/SOAPService/updateSalesOrder">
+		<!--更新销售订单-->
+		<updateSalesOrder ClassName="" FunctionName="updateSalesOrder" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</updateSalesOrder>
+	<updateSalesOrderAll WebUrl="/webtools/control/SOAPService/updateSalesOrderAll">
+		<!--更新销售订单，生成收银单，生成出库单-->
+		<updateSalesOrderAll ClassName="" FunctionName="updateSalesOrderAll" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</updateSalesOrderAll>
+	<getSalesOutWhsOrderDtlById WebUrl="/webtools/control/SOAPService/getSalesOutWhsOrderDtlById">
+		<!--更新销售订单，生成收银单，生成出库单-->
+		<getSalesOutWhsOrderDtlById ClassName="" FunctionName="getSalesOutWhsOrderDtlById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getSalesOutWhsOrderDtlById>
+	<createSalesOutWhsOrder WebUrl="/webtools/control/SOAPService/createSalesOutWhsOrder">
+		<!--生成出库单-->
+		<createSalesOutWhsOrder ClassName="" FunctionName="createSalesOutWhsOrder" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</createSalesOutWhsOrder>
+	<updateChangedPriceList WebUrl="/webtools/control/SOAPService/updateChangedPriceList">
+		<!--变价通知-->
+		<updateChangedPriceList ClassName="" FunctionName="updateChangedPriceList" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</updateChangedPriceList>
+	<getCollectionOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getCollectionOrderHeaderByCondition">
+		<!--根据条件得到收款单表头-->
+		<getCollectionOrderHeaderByCondition ClassName="" FunctionName="getCollectionOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getCollectionOrderHeaderByCondition>
+	<getCollectionOrderDtlByCondition WebUrl="/webtools/control/SOAPService/getCollectionOrderDtlByCondition">
+		<!--根据条件得到收款单表头-->
+		<getCollectionOrderDtlByCondition ClassName="" FunctionName="getCollectionOrderDtlByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getCollectionOrderDtlByCondition>
+	<createReturnOrderAll WebUrl="/webtools/control/SOAPService/createReturnOrderAll">
+		<!--根据条件得到收款单表头-->
+		<createReturnOrderAll ClassName="" FunctionName="createReturnOrderAll" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</createReturnOrderAll>
+	<getReturnOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getReturnOrderHeaderByCondition">
+		<!--根据条件得到退货单表头-->
+		<getReturnOrderHeaderByCondition ClassName="" FunctionName="getReturnOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getReturnOrderHeaderByCondition>
+	<getReturnOrderDtlById WebUrl="/webtools/control/SOAPService/getReturnOrderDtlById">
+		<!--根据ID得到退货单明细-->
+		<getReturnOrderDtlById ClassName="" FunctionName="getReturnOrderDtlById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getReturnOrderDtlById>
+	<getPaymentAmount WebUrl="/webtools/control/SOAPService/getPaymentAmount">
+		<!--获得缴款金额-->
+		<getPaymentAmount ClassName="" FunctionName="getPaymentAmount" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getPaymentAmount>
+	<createPaymentInOrder WebUrl="/webtools/control/SOAPService/createPaymentInOrder">
+		<!--生成日结单-->
+		<createPaymentInOrder ClassName="" FunctionName="createPaymentInOrder" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</createPaymentInOrder>
+	<getPaymentInOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getPaymentInOrderHeaderByCondition">
+		<!--根据条件查询日结单表头-->
+		<getPaymentInOrderHeaderByCondition ClassName="" FunctionName="getPaymentInOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getPaymentInOrderHeaderByCondition>
+	<getPaymentInOrderDtlById WebUrl="/webtools/control/SOAPService/getPaymentInOrderDtlById">
+		<!--根据Id查询日结单明细-->
+		<getPaymentInOrderDtlById ClassName="" FunctionName="getPaymentInOrderDtlById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</getPaymentInOrderDtlById>
+	<uploadData2Store WebUrl="/webtools/control/SOAPService/uploadData2Store">
+		<!--数据上传-->
+		<uploadData2Store ClassName="" FunctionName="uploadData2Store" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</uploadData2Store>
+	<import2StoreJob WebUrl="/webtools/control/SOAPService/import2StoreJob">
+		<!--数据下载-->
+		<import2StoreJob ClassName="" FunctionName="import2StoreJob" Default="" TimerType="0" TimerInfo="30" Type="In" />
+	</import2StoreJob>
+  <updateUserPassword WebUrl="/webtools/control/SOAPService/updateUserPassword">
+    <!--更改密码-->
+    <updateUserPassword ClassName="" FunctionName="updateUserPassword" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </updateUserPassword>
+  <createPreOrderAll WebUrl="/webtools/control/SOAPService/createPreOrderAll">
+    <!--生成预订单-->
+    <createPreOrderAll ClassName="" FunctionName="createPreOrderAll" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </createPreOrderAll>
+  <getPreOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getPreOrderHeaderByCondition">
+    <!--根据条件查询预订单表头-->
+    <getPreOrderHeaderByCondition ClassName="" FunctionName="getPreOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getPreOrderHeaderByCondition>
+  <getPreOrderDtlById WebUrl="/webtools/control/SOAPService/getPreOrderDtlById">
+    <!--根据ID查询预订单明细-->
+    <getPreOrderDtlById ClassName="" FunctionName="getPreOrderDtlById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getPreOrderDtlById>
+  <deletePreOrderById WebUrl="/webtools/control/SOAPService/deletePreOrderById">
+    <!--根据ID删除预订单-->
+    <deletePreOrderById ClassName="" FunctionName="deletePreOrderById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </deletePreOrderById>
+  <getPreOrderById WebUrl="/webtools/control/SOAPService/getPreOrderById">
+    <!--根据ID查询预订单-->
+    <getPreOrderById ClassName="" FunctionName="getPreOrderById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getPreOrderById>
+  <getPreCollectionOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getPreCollectionOrderHeaderByCondition">
+    <!--根据条件查询订金预收单表头-->
+    <getPreCollectionOrderHeaderByCondition ClassName="" FunctionName="getPreCollectionOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getPreCollectionOrderHeaderByCondition>
+  <getPreCollectionOrderDtlByCondition WebUrl="/webtools/control/SOAPService/getPreCollectionOrderDtlByCondition">
+    <!--根据条件查询订金预收单明细-->
+    <getPreCollectionOrderDtlByCondition ClassName="" FunctionName="getPreCollectionOrderDtlByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getPreCollectionOrderDtlByCondition>
+  <createBackOrderAll WebUrl="/webtools/control/SOAPService/createBackOrderAll">
+    <!--生成退订单全部（退订单和退款单）-->
+    <createBackOrderAll ClassName="" FunctionName="createBackOrderAll" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </createBackOrderAll>
+  <getBackOrderHeaderByCondition WebUrl="/webtools/control/SOAPService/getBackOrderHeaderByCondition">
+    <!--根据条件查询退订单表头-->
+    <getBackOrderHeaderByCondition ClassName="" FunctionName="getBackOrderHeaderByCondition" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getBackOrderHeaderByCondition>
+  <getBackOrderDtlById WebUrl="/webtools/control/SOAPService/getBackOrderDtlById">
+    <!--根据ID查询退订单-->
+    <getBackOrderDtlById ClassName="" FunctionName="getBackOrderDtlById" Default="" TimerType="0" TimerInfo="30" Type="In" />
+  </getBackOrderDtlById>  
+</ServiceConfig>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SearchConditionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Where>DC.STATUS IN ('0','1') and MTC.ORDER_TYPE='WarehouseTransfer' and DC.PRODUCT_STORE_ID='@PRODUCT_STORE_ID' and </Where> 
+	<OrderBy>
+		<string>docDate</string>
+	</OrderBy>
+	<ShowColumn>
+		<ShowColumnCondition>
+			<FieldColumnName>docId</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>指令单号</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>docDate</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>制单时间</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>movementTypeName</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>移动类型</FieldColumnCaption>
+		</ShowColumnCondition>
+		<ShowColumnCondition>
+			<FieldColumnName>memo</FieldColumnName>
+			<Type />
+			<FieldColumnCaption>备注</FieldColumnCaption>
+		</ShowColumnCondition>
+	</ShowColumn>
+	<Fields>
+		<string>docId</string>
+		<string>docDate</string>
+		<string>movementTypeName</string>
+		<string>memo</string>
+	</Fields>
+	<ViewName>DeliveryCommandView</ViewName>
+	<Name>SearchAndResult</Name>
+	<ParentNote>QueryService</ParentNote>
+	<ChildNote>selectByConditions</ChildNote>
+</SearchConditionModel>
+
+
+

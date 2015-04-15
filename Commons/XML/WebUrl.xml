@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ServiceConfig TimerStep="60000" TimerDate="60000">
+  <URL>
+    <In IpAddress="http://192.168.1.101:8080"/>
+    <Out IpAddress="http://192.168.1.101:8080"/>
+  </URL>
+</ServiceConfig>
