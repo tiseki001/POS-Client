@@ -62,7 +62,8 @@ namespace PriceList
             {
                 m_TimeofGetData = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.000");
                 //组织查询条件
-                whereCondition += " C.PPRS_STORE_ID = '" + LoginInfo.ProductStoreId + "'";
+               whereCondition += " C.PPRS_STORE_ID = '" + LoginInfo.ProductStoreId + "'";
+
                //  whereCondition += " AND C.PLC_LAST_UPDATED_STAMP < '" + m_TimeofGetData + "'";
 
                 Commons.XML.GetData.GetUrl("QueryService", "selectByConditions", out url, out func);
@@ -80,8 +81,8 @@ namespace PriceList
                 Model.Fields.Add("minPrice");
                 Model.Fields.Add("costPrice");
                 Model.Where = whereCondition;
-                //Model.OrderBy = new List<String>();
-                //Model.OrderBy.Add("productId");
+                Model.OrderBy = new List<String>();
+                Model.OrderBy.Add("productId");
                 Model.Start = "0";
                 Model.Number = "1000";
 

@@ -61,7 +61,8 @@ namespace PriceList
             try
             {
                  //组织查询条件
-                whereCondition += " P0.PPRS_STORE_ID = '" + LoginInfo.ProductStoreId + "'";
+                whereCondition += " S0.STORE_ID = '" + LoginInfo.ProductStoreId + "'";
+
 
                 //品牌
                 if (!String.IsNullOrEmpty(textEdit_Brand.Text.Trim()))
@@ -76,7 +77,7 @@ namespace PriceList
                 //商品
                 if (!String.IsNullOrEmpty(textEdit_ProductId.Text.Trim()))
                 {
-                    whereCondition += " AND P0.PPL_PRODUCT_ID LIKE '%" + textEdit_ProductId.Text.Trim() + "%'";
+                    whereCondition += " AND P0.PRODUCT_ID LIKE '%" + textEdit_ProductId.Text.Trim() + "%'";
                 }
                 if (!String.IsNullOrEmpty(textEdit_ProductName.Text.Trim()))
                 {
